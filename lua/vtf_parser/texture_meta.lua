@@ -2,6 +2,10 @@
 local texture_meta = {}
 texture_meta.__index = texture_meta
 
+function texture_meta:GetName()
+	return self.name
+end
+
 function texture_meta:Width()
 	return self.width
 end
