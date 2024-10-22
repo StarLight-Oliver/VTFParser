@@ -17,7 +17,7 @@ local function parseMipmaps(mat, width, height, headerData)
 	local mipmapCount = headerData.mipmapCount
 	local depth = headerData.depth
 
-	if depth == 0 then depth = 1 end
+	if not depth or depth == 0 then depth = 1 end
 
 	local zSlicers = 1
 
